@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_Giris", "1_Giris\1_Giris.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_Giris", "2_Giris\2_Giris.csproj", "{C8D32398-E7A3-4985-8E30-C4B65FE85910}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_CodeFirst", "3_CodeFirst\3_CodeFirst.csproj", "{588C03F9-3ECD-4D0E-BB55-860F88951D57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C8D32398-E7A3-4985-8E30-C4B65FE85910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8D32398-E7A3-4985-8E30-C4B65FE85910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8D32398-E7A3-4985-8E30-C4B65FE85910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{588C03F9-3ECD-4D0E-BB55-860F88951D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{588C03F9-3ECD-4D0E-BB55-860F88951D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{588C03F9-3ECD-4D0E-BB55-860F88951D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{588C03F9-3ECD-4D0E-BB55-860F88951D57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,5 +12,9 @@ namespace _3_CodeFirst.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreDate { get; set; }
+
+        // Category'den product'a bağlantı. Vt ilişkisi yapmaz ancak c# tarafında x bir categoryinin productlarına erişim imkanı verir...
+        public List<Product> Products { get; set; }
+        
     }
 }

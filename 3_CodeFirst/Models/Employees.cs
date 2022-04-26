@@ -29,5 +29,8 @@ namespace _3_CodeFirst.Models
 
         [StringLength(maximumLength:50)] // nvarchar(50)
         public string SurName { get; set; }
+
+        // navigation property
+        public List<Order> Orders { get; set; }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _3_CodeFirst.Models;
 
@@ -11,9 +12,10 @@ using _3_CodeFirst.Models;
 namespace _3_CodeFirst.Migrations
 {
     [DbContext(typeof(ModelContext))]
-    partial class ModelContextModelSnapshot : ModelSnapshot
+    [Migration("20220426180806_OrderAndCustomerAndEmployeeRelation")]
+    partial class OrderAndCustomerAndEmployeeRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -112,9 +114,6 @@ namespace _3_CodeFirst.Migrations
                     b.Property<DateTime?>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ShipTo")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("ShippedDate")
                         .HasColumnType("datetime2");
 
@@ -123,8 +122,6 @@ namespace _3_CodeFirst.Migrations
                     b.HasIndex("CalisanId");
 
                     b.HasIndex("MusteriId");
-
-                    b.HasIndex("ShipTo");
 
                     b.ToTable("Order");
                 });
@@ -253,17 +250,9 @@ namespace _3_CodeFirst.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("_3_CodeFirst.Models.Shipper", "Shipper")
-                        .WithMany("Orders")
-                        .HasForeignKey("ShipTo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Customer");
 
                     b.Navigation("Employee");
-
-                    b.Navigation("Shipper");
                 });
 
             modelBuilder.Entity("_3_CodeFirst.Models.OrderDetail", b =>
@@ -327,11 +316,6 @@ namespace _3_CodeFirst.Migrations
             modelBuilder.Entity("_3_CodeFirst.Models.Product", b =>
                 {
                     b.Navigation("OrderDetails");
-                });
-
-            modelBuilder.Entity("_3_CodeFirst.Models.Shipper", b =>
-                {
-                    b.Navigation("Orders");
                 });
 
             modelBuilder.Entity("_3_CodeFirst.Models.Suppliers", b =>

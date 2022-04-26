@@ -14,5 +14,6 @@ namespace _3_CodeFirst.Models
         public int SuppID { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
+        public List<Product> Products { get; set; }
     }
 }

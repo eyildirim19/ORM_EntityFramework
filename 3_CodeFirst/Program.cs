@@ -15,3 +15,6 @@ Console.WriteLine("Hello, World!");
 
  // update-database => son migration dosyasındaki güncellemeler veritabanına yansıtılır....
 
+// eğer belli bir migrationa dönmek istiyorsanız;
+// 1) update-database -migration DonulecekMigration
+// 2) remove-migration en migration'i silmek için

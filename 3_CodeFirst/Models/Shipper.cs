@@ -13,5 +13,7 @@ namespace _3_CodeFirst.Models
         public string Name { get; set; }
         public string Adress { get; set; }
         public string Phone { get; set; }
+
+        public List<Order> Orders { get; set; }
     }
 }
